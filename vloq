@@ -1,1 +1,11 @@
 
+for _,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+   print("found ScriptContext error detection, removing")
+   v:Disable()
+end
+game:GetService("Players").LocalPlayer.PlayerGui.Oxygen:Destroy()
+        game:GetService("StarterGui").Oxygen:Destroy()
+for _,v in pairs(getconnections(game:GetService("LogService").MessageOut)) do
+   print("found LogService output detection, removing")
+   v:Disable()
+end
